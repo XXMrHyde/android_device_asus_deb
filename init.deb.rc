@@ -433,19 +433,11 @@ service charger /sbin/healthd -c
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
 
-<<<<<<< HEAD
-=======
-# Binding fuse mount point to /storage/emulated/legacy
-on property:init.svc.sdcard=running
-    wait /mnt/shell/emulated/0
-    mount none /mnt/shell/emulated/0 /storage/emulated/legacy bind
-
 # USB-OTG storage daemon
 service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
     class late_start
     disabled
 
->>>>>>> 7543d78... Enable mounting of connected USB storage devices:
 service thermald /system/bin/thermald
     class main
     group radio
