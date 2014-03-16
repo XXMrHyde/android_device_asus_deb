@@ -16,8 +16,11 @@
 
 # rild
 PRODUCT_PACKAGES := \
-    rild \
-    BasicSmsReceiver
+    rild
+
+# MMS
+PRODUCT_PACKAGES += \
+    Mms
 
 PRODUCT_COPY_FILES := \
     device/asus/deb/fstab.deb:root/fstab.flo \
