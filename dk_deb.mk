@@ -27,6 +27,10 @@ $(call inherit-product, vendor/dk/config/common.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
+# Bootanimation
+PRODUCT_COPY_FILES += \
+  device/asus/flo/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+
 PRODUCT_NAME := dk_deb
 PRODUCT_DEVICE := deb
 PRODUCT_BRAND := Android
